@@ -17,7 +17,7 @@
     .footer-20192 {
         position: relative;
         color: #fff;
-        padding: 7rem 0;
+        padding: 3rem 0;
         background-image: linear-gradient(to top, #12145c 0%, #1d52a6 100%);
     }
 
@@ -131,16 +131,6 @@
     <div class="pattern">
         <div class="site-section">
             <div class="container">
-                <div class="cta d-block d-flex align-items-center px-5" id="slide">
-                    <div>
-                        <h2 class="mb-0 text-dark">Laman Pengaduan</h2>
-                        <h3 class="text-dark">Laporkan segala tindak berindikasi pelanggaran selingkung Universitas
-                            Bengkulu ke laman berikut.</h3>
-                    </div>
-                    <div class="ms-auto">
-                        <a href="/report" class="btn btn-dark rounded-0 py-3 px-5">Lapor</a>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-4">
                         <a href="#" class="footer-logo">Satuan Pengawasan Internal</a>
