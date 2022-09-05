@@ -54,7 +54,7 @@
                         <span class="line line1"></span>
                         <span class="letters">Selamat Datang</span>
                     </span></h1>
-                <p class="fs-5 text-white">Situs Resmi Satuan Pengawas Internal Universitas Bengkulu.
+                <p class="fs-5 text-white">Situs Resmi Satuan Pengawasan Internal Universitas Bengkulu.
                 </p>
 
                 <button type="button" class="btn btn-dark">Lihat Berita Terkini</button>
