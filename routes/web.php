@@ -17,5 +17,6 @@ use App\Http\Controllers\LandingController;
 //Landing
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/report', [LandingController::class, 'report']);
+Route::get('/news', [LandingController::class, 'news']);
 //upload report whistleblower
 Route::post('/report/create', [LandingController::class, 'storereport']);
