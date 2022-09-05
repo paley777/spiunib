@@ -2,6 +2,28 @@
 
 @section('container')
     <style>
+        #slide {
+            position: relative;
+            left: -100px;
+            -webkit-animation: slide 0.5s forwards;
+            -webkit-animation-delay: 0s;
+            animation: slide 0.5s forwards;
+            animation-delay: 0s;
+        }
+
+        @-webkit-keyframes slide {
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes slide {
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+    <style>
         .preloader {
             position: fixed;
             top: 0;
@@ -45,8 +67,8 @@
         <hr>
         <p class="mb-0"></p>
         <div class="row">
-            <div class="col-9">
-                <div class="card">
+            <div class="col-lg-9 col-xs-12">
+                <div class="card" id="slide">
                     <div class="card-header">
                         Formulir Pelaporan
                     </div>
@@ -129,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-xs-12">
                 <div class="alert alert-light" role="alert">
                     <h4 class="alert-heading">Menjadi Whistleblower.</h4>
                     <p class="text-justify">Bantu SPI dengan menjadi Whistleblower yang bijak. Anda dapat melaporkan tindak

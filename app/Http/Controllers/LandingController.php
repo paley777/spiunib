@@ -23,6 +23,12 @@ class LandingController extends Controller
             'active' => 'report',
         ]);
     }
+    public function news()
+    {
+        return view('landing.news.index', [
+            'active' => 'news',
+        ]);
+    }
 
     /**
      * Store a newly created resource in storage.

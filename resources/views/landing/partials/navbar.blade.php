@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class=" navbar-nav ">
                 <a class="nav-link {{ $active === 'index' ? 'active' : '' }}" href="/">Beranda</a>
-                <a class="nav-link" href="#">Berita dan Pengumuman</a>
+                <a class="nav-link {{ $active === 'news' ? 'active' : '' }}" href="/news">Berita dan Pengumuman</a>
                 <a class="nav-link {{ $active === 'report' ? 'active' : '' }}" href="/report">Pengaduan</a>
                 <a class="nav-link" href="#">Arsip</a>
                 <a class="nav-link" href="#">Profil</a>
             </div>
         </div>
-      
+
 
     </div>
 </nav>
