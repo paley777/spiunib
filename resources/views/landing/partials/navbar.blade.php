@@ -25,8 +25,7 @@
                 <a class="nav-link {{ $active === 'index' ? 'active' : '' }}" href="/">Beranda</a>
                 <a class="nav-link {{ $active === 'news' ? 'active' : '' }}" href="/news">Berita dan Pengumuman</a>
                 <a class="nav-link {{ $active === 'report' ? 'active' : '' }}" href="/report">Pengaduan</a>
-                <a class="nav-link" href="#">Arsip</a>
-                <a class="nav-link" href="#">Profil</a>
+                <a class="nav-link {{ $active === 'profile' ? 'active' : '' }}" href="/profile">Profil</a>
             </div>
         </div>
 
