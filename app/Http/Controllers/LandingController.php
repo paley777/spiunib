@@ -69,4 +69,39 @@ class LandingController extends Controller
 
         return redirect('/report')->with('success', 'Laporan telah ditambahkan.');
     }
+
+    public function login()
+    {
+        if (Auth::check()) {
+            return redirect('/dashboard');
+        } else {
+            return view('landing.login', [
+                'active' => 'login',
+            ]);
+        }
+    }
+
+    /**
+     * Handle an authentication attempt.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()
+                ->intended('/dashboard')
+                ->with('success', 'Selamat Datang di Dashboard SPI UNIB!');
+        }
+
+        return back()->with('loginError', 'E-mail/Password Anda Salah, Coba Lagi!');
+    }
 }
