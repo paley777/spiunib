@@ -57,7 +57,7 @@
                 <p class="fs-5 text-white">Situs Resmi Satuan Pengawasan Internal Universitas Bengkulu.
                 </p>
 
-                <button type="button" class="btn btn-dark">Lihat Berita Terkini</button>
+                <a type="button" href="/news" class="btn btn-dark">Lihat Berita Terkini</a>
             </div>
         </header>
     </div>

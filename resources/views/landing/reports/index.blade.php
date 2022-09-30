@@ -42,6 +42,11 @@
             font: 14px arial;
         }
     </style>
+    <style>
+        #header {
+            background-image: linear-gradient(to top, #12145c 0%, #1d52a6 100%);
+        }
+    </style>
     <div class="preloader">
         <div class="loading">
             <div class="spinner-border text-dark" role="status">
@@ -49,23 +54,29 @@
             <p>Harap Tunggu</p>
         </div>
     </div>
-    <div class="alert alert-light mx-5 mt-4" role="alert">
+    <div class="mx-5 mt-4">
         @if (session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>{{ session('success') }}</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <h4 class="alert-heading">Whistleblowing System</h4>
-        <p class="text-justify">Selamat datang di Whistleblowing System. Anda akan diarahkan untuk mengisi formulir
-            pelaporan
-            terkait terduga
-            tindak pelanggaran yang terjadi di Universitas Bengkulu. Anda tidak perlu khawatir identitas anda akan terungkap
-            karena SPI dapat merahasiakan identitas anda sebagai anonim. Apabila anda tidak ingin identitas anda terungkap,
-            isilah formulir di bawah dengan tanpa mencantumkan identitas asli Anda, Anda diperkenankan untuk membuat
-            identitas samaran.</p>
-        <hr>
-        <p class="mb-0"></p>
+        <div class="row text-white" id="header">
+            <h4 class="alert-heading mt-4">Whistleblowing System <i class="bi bi-broadcast"></i></h4>
+            <p class="text-justify">Selamat datang di Whistleblowing System. Anda akan diarahkan untuk mengisi formulir
+                pelaporan
+                terkait terduga
+                tindak pelanggaran yang terjadi di Universitas Bengkulu. Anda tidak perlu khawatir identitas anda akan
+                terungkap
+                karena SPI dapat merahasiakan identitas anda sebagai anonim. Apabila anda tidak ingin identitas anda
+                terungkap,
+                isilah formulir di bawah dengan tanpa mencantumkan identitas asli Anda, Anda diperkenankan untuk membuat
+                identitas samaran.
+            </p>
+            <hr>
+        </div>
+        <br>
+
         <div class="row">
             <div class="col-lg-9 col-xs-12">
                 <div class="card" id="slide">
