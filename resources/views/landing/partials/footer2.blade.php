@@ -164,7 +164,7 @@
                     <div class="col-2">
                         <h3>Kontak Kami</h3>
                         <ul class="list-unstyled links">
-                            <li><a href="mailto: abc@example.com"><i class="bi bi-envelope-fill"></i> E-mail</a></li>
+                            <li><a href="mailto: spi@unib.ac.id"><i class="bi bi-envelope-fill"></i> E-mail</a></li>
 
                         </ul>
                     </div>
