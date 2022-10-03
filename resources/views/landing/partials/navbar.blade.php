@@ -4,15 +4,12 @@
     }
 
     .nav-link {
-        font-size: 12pt !important;
+        font-size: 1rem !important;
     }
 
-    .btn-sm {
-        font-size: 11pt !important;
-    }
 </style>
 
-<nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark px-1">
+<nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark px-1 p-2">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
             <img src="{{ asset('storage/images/logo_spi1.png') }}" alt="" width="230" height="40"></a>

@@ -25,12 +25,7 @@
         position: relative;
     }
 
-    .footer-20192 h3 {
-        font-size: 16px;
-        margin-bottom: 10px;
-        margin-top: 0;
-        line-height: 1.5;
-    }
+    .footer-20192 h3 {}
 
     .footer-20192 .links li {
         margin-bottom: 10px;
@@ -74,7 +69,7 @@
 
     .footer-20192 .footer-logo {
         color: #fff;
-        font-size: 20px;
+
         text-transform: uppercase;
         letter-spacing: .1rem;
     }
@@ -97,9 +92,7 @@
         line-height: 1.5;
     }
 
-    .footer-20192 .cta h3 {
-        font-size: 20px;
-    }
+    .footer-20192 .cta h3 {}
 
     .pattern {
         background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.5' stroke='hsla(216, 0%, 97%, 0.13)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
@@ -127,14 +120,28 @@
         }
     }
 </style>
+<style>
+    .fontheader {
+        font-size: 1.563rem !important;
+    }
+
+    .fontp {
+        font-size: 1.25rem !important;
+    }
+
+    .fontlink {
+        font-size: 1rem !important;
+    }
+</style>
 <footer class="footer-20192">
     <div class="pattern">
         <div class="site-section">
             <div class="container">
                 <div class="cta d-block d-flex align-items-center px-5" id="slide">
                     <div>
-                        <h2 class="mb-0 text-dark">Laman Pengaduan</h2>
-                        <h3 class="text-dark">Laporkan segala tindak berindikasi pelanggaran selingkung Universitas
+                        <h2 class="mb-0 text-dark fontheader fw-normal">Laman Pengaduan</h2>
+                        <h3 class="text-dark fontp fw-normal">Laporkan segala tindak berindikasi pelanggaran selingkung
+                            Universitas
                             Bengkulu ke laman berikut.</h3>
                     </div>
                     <div class="ms-auto">
@@ -143,15 +150,15 @@
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <a href="#" class="footer-logo">Satuan Pengawasan Internal</a>
-                        <p class="fs-5 footer-logo">Universitas Bengkulu</p>
-                        <p class="copyright">
+                        <a href="#" class="footer-logo fontp">Satuan Pengawasan Internal</a>
+                        <p class="footer-logo fontp">Universitas Bengkulu</p>
+                        <p class="copyright fontp">
                             <small>&copy; 2022</small>
                         </p>
                     </div>
                     <div class="col-3">
-                        <h3>Tautan Internal</h3>
-                        <ul class="list-unstyled links">
+                        <h3 class="fontlink">Tautan Internal</h3>
+                        <ul class="list-unstyled links fontlink">
                             <li><a href="https://www.unib.ac.id/">Universitas Bengkulu</a></li>
                             <li><a href="https://pak.unib.ac.id/">Sistem Akademik</a></li>
                             <li><a href="https://presensi.unib.ac.id/">Sistem Absensi Perkuliahan</a></li>
@@ -162,8 +169,8 @@
                         </ul>
                     </div>
                     <div class="col-3">
-                        <h3>Tautan Eksternal</h3>
-                        <ul class="list-unstyled links">
+                        <h3 class="fontlink">Tautan Eksternal</h3>
+                        <ul class="list-unstyled links fontlink">
                             <li><a href="https://www.kemdikbud.go.id/main/">Kementerian Pendidikan, Kebudayaan, Riset
                                     dan Teknologi</a></li>
                             <li><a href="http://blu.djpbn.kemenkeu.go.id/">Direktorat Pembinaan Pengelolaan Keuangan
@@ -172,10 +179,10 @@
                         </ul>
                     </div>
                     <div class="col-2">
-                        <h3>Kontak Kami</h3>
-                        <ul class="list-unstyled links">
+                    <h3 class="fontlink">Kontak Kami</h3>
+                        <ul class="list-unstyled links fontlink">
                             <li><a href="mailto: spi@unib.ac.id"><i class="bi bi-envelope-fill"></i> E-mail</a></li>
-
+                            <li><a href="https://wa.me/0811738966"><i class="bi bi-whatsapp"></i></i> Whatsapp</a></li>
                         </ul>
                     </div>
 

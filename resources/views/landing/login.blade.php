@@ -1,6 +1,19 @@
 @extends('landing.layouts.main2')
 
 @section('container')
+    <style>
+        #fontheader {
+            font-size: 1.563rem !important;
+        }
+
+        #fontp {
+            font-size: 1.25rem !important;
+        }
+
+        #fontlink {
+            font-size: 1rem !important;
+        }
+    </style>
     <br><br>
     @if (session()->has('loginError'))
         <div class="container">
@@ -18,10 +31,10 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">Portal Administrator SPI UNIB.</h5>
-                    <p class="card-text">Hai Admin! Masuk ke dashboard SPI UNIB dengan memasukkan e-mail dan kata sandi di
+                    <h5 class="card-title" id="fontheader">Portal Administrator SPI UNIB.</h5>
+                    <p class="card-text" id="fontlink">Hai Admin! Masuk ke dashboard SPI UNIB dengan memasukkan e-mail dan kata sandi di
                         bawah ini.</p>
-                    <form method="POST" action="/login">
+                    <form method="POST" action="/login" id="fontlink">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">E-mail</label>

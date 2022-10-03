@@ -47,6 +47,18 @@
             background-image: linear-gradient(to top, #12145c 0%, #1d52a6 100%);
         }
     </style>
+    <style>
+        #fontheader {
+            font-size: 1.563rem !important;
+        }
+
+        #fontp {
+            font-size: 1rem !important;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
     <div class="preloader">
         <div class="loading">
             <div class="spinner-border text-dark" role="status">
@@ -62,8 +74,10 @@
             </div>
         @endif
         <div class="row text-white" id="header">
-            <h4 class="alert-heading mt-4">Whistleblowing System <i class="bi bi-broadcast"></i></h4>
-            <p class="text-justify">Selamat datang di Whistleblowing System. Anda akan diarahkan untuk mengisi formulir
+            <h4 class="alert-heading mt-4 fw-normal" id="fontheader">Whistleblowing System <i class="bi bi-broadcast"></i>
+            </h4>
+            <p class="text-justify fw-light" id="fontp">Selamat datang di Whistleblowing System. Anda akan diarahkan
+                untuk mengisi formulir
                 pelaporan
                 terkait terduga
                 tindak pelanggaran yang terjadi di Universitas Bengkulu. Anda tidak perlu khawatir identitas anda akan
@@ -79,11 +93,11 @@
 
         <div class="row">
             <div class="col-lg-9 col-xs-12">
-                <div class="card" id="slide">
-                    <div class="card-header">
+                <div class="card fw-normal" id="slide">
+                    <div class="card-header" id="fontp">
                         Formulir Pelaporan
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" id="fontp">
                         <form class="row g-2 needs-validation" method="POST" action="/report/create" novalidate
                             enctype="multipart/form-data">
                             @csrf
@@ -163,11 +177,12 @@
                 </div>
             </div>
             <div class="col-lg-3 col-xs-12">
-                <div class="alert alert-light" role="alert">
-                    <h4 class="alert-heading">Menjadi Whistleblower.</h4>
-                    <p class="text-justify">Bantu SPI dengan menjadi Whistleblower yang bijak. Anda dapat melaporkan tindak
+                <div class="alert" role="alert">
+                    <h4 class="alert-heading fw-normal" id="fontheader">Menjadi Whistleblower.</h4>
+                    <p class="text-justify font-light" id="fontp">Bantu SPI dengan menjadi Whistleblower yang bijak. Anda dapat
+                        melaporkan tindak
                         pelanggaran dengan cermat dan jelas dengan memenuhi unsur berikut.</p>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush text-justify" id="fontp">
                         <li class="list-group-item">Apa? : Perbuatan apa yang terindikasi pelanggaran.</li>
                         <li class="list-group-item">Siapa? : Siapa yang terduga terlibat pelanggaran.</li>
                         <li class="list-group-item">Di mana? : Di mana lokasi pelanggaran tersebut.</li>
