@@ -20,15 +20,31 @@
             font: 14px arial;
         }
     </style>
+    <style>
+        #fontheader {
+            font-size: 1.563rem !important;
+        }
 
+        #fontp {
+            font-size: 1.25rem !important;
+        }
+
+        #fontlink {
+            font-size: 1rem !important;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
     <div class="alert alert-warning mx-5 mt-4">
         <div class="row">
             <div class="col-9">
-                <h4 class="alert-heading">Launching Website Resmi SPI Universitas Bengkulu</h4>
-                <h5 class="fw-normal fs-6">Diunggah oleh Administrator pada 30 September 2022</h5>
+                <h4 class="alert-heading fw-normal" id="fontheader">Launching Website Resmi SPI Universitas Bengkulu</h4>
+                <h5 class="fw-light" id="fonlink">Diunggah oleh Administrator pada 30 September 2022</h5>
             </div>
             <div class="col-3 d-flex">
-                <a href="/news">Kembali ke Laman Berita Utama ></a>
+                <a href="/news" id="fontlink">Kembali ke Laman Berita Utama ></a>
             </div>
         </div>
         <div class="row">
@@ -41,7 +57,8 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo magna diam.
+                <p class="fw-normal text-justify" id="fontlink">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus commodo magna diam.
                     Sed nisl arcu, malesuada id felis euismod, facilisis iaculis enim. Curabitur risus justo, mattis in
                     dapibus non, dignissim quis lectus. Proin imperdiet turpis ante, tincidunt placerat metus mattis et.
                     Fusce sed porttitor mauris, et tempus nulla. Cras auctor, lectus ut euismod mattis, erat mauris

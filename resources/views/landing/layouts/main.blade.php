@@ -18,6 +18,7 @@
 <style>
     body {
         font-family: 'Epilogue', sans-serif;
+        font-size: 12px !important;
     }
 </style>
 
