@@ -1,4 +1,5 @@
 @ECHO OFF
 setlocal DISABLEDELAYEDEXPANSION
-SET BIN_TARGET=%~dp0/../laravel/pint/builds/pint
+SET BIN_TARGET=%~dp0/pint
+SET COMPOSER_BIN_DIR=%~dp0
 php "%BIN_TARGET%" %*

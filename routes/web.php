@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,11 @@ Route::get('/news/details/1', [LandingController::class, 'newsdetails']);
 //login
 Route::get('/login', [LandingController::class, 'login']);
 Route::post('/login', [LandingController::class, 'authenticate'])->name('login');
+//logout
+Route::post('/logout', [DashboardController::class, 'logout'])->middleware('auth');
 //Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/profile', [DashboardController::class, 'profile'])->middleware('auth');
+Route::resource('/dashboard/reports', ReportController::class)->middleware('auth');
+//print
+Route::post('/dashboard/reports/print', [ReportController::class, 'print'])->middleware('auth');

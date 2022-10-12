@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title" id="fontheader">Portal Administrator SPI UNIB.</h5>
+                    <h5 class="card-title" id="fontheader">Portal Administrator SPI UNIB</h5>
                     <p class="card-text" id="fontlink">Hai Admin! Masuk ke dashboard SPI UNIB dengan memasukkan e-mail dan kata sandi di
                         bawah ini.</p>
                     <form method="POST" action="/login" id="fontlink">
