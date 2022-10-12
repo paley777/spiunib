@@ -3,6 +3,7 @@
 namespace Illuminate\Support;
 
 use Closure;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
@@ -166,23 +167,25 @@ class Stringable implements JsonSerializable
     /**
      * Determine if a given string contains a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
+     * @param  bool  $ignoreCase
      * @return bool
      */
-    public function contains($needles)
+    public function contains($needles, $ignoreCase = false)
     {
-        return Str::contains($this->value, $needles);
+        return Str::contains($this->value, $needles, $ignoreCase);
     }
 
     /**
      * Determine if a given string contains all array values.
      *
-     * @param  array  $needles
+     * @param  iterable<string>  $needles
+     * @param  bool  $ignoreCase
      * @return bool
      */
-    public function containsAll(array $needles)
+    public function containsAll($needles, $ignoreCase = false)
     {
-        return Str::containsAll($this->value, $needles);
+        return Str::containsAll($this->value, $needles, $ignoreCase);
     }
 
     /**
@@ -199,7 +202,7 @@ class Stringable implements JsonSerializable
     /**
      * Determine if a given string ends with a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
      * @return bool
      */
     public function endsWith($needles)
@@ -279,7 +282,7 @@ class Stringable implements JsonSerializable
     /**
      * Determine if a given string matches a given pattern.
      *
-     * @param  string|array  $pattern
+     * @param  string|iterable<string>  $pattern
      * @return bool
      */
     public function is($pattern)
@@ -576,23 +579,23 @@ class Stringable implements JsonSerializable
     /**
      * Replace the given value in the given string.
      *
-     * @param  string|string[]  $search
-     * @param  string|string[]  $replace
+     * @param  string|iterable<string>  $search
+     * @param  string|iterable<string>  $replace
      * @return static
      */
     public function replace($search, $replace)
     {
-        return new static(str_replace($search, $replace, $this->value));
+        return new static(Str::replace($search, $replace, $this->value));
     }
 
     /**
      * Replace a given value in the string sequentially with an array.
      *
      * @param  string  $search
-     * @param  array  $replace
+     * @param  iterable<string>  $replace
      * @return static
      */
-    public function replaceArray($search, array $replace)
+    public function replaceArray($search, $replace)
     {
         return new static(Str::replaceArray($search, $replace, $this->value));
     }
@@ -747,7 +750,7 @@ class Stringable implements JsonSerializable
     /**
      * Determine if a given string starts with a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
      * @return bool
      */
     public function startsWith($needles)
@@ -793,9 +796,9 @@ class Stringable implements JsonSerializable
     /**
      * Replace text within a portion of a string.
      *
-     * @param  string|array  $replace
-     * @param  array|int  $offset
-     * @param  array|int|null  $length
+     * @param  string|string[]  $replace
+     * @param  int|int[]  $offset
+     * @param  int|int[]|null  $length
      * @return static
      */
     public function substrReplace($replace, $offset = 0, $length = null)
@@ -880,7 +883,7 @@ class Stringable implements JsonSerializable
     /**
      * Execute the given callback if the string contains a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
      * @param  callable  $callback
      * @param  callable|null  $default
      * @return static
@@ -893,7 +896,7 @@ class Stringable implements JsonSerializable
     /**
      * Execute the given callback if the string contains all array values.
      *
-     * @param  array  $needles
+     * @param  iterable<string>  $needles
      * @param  callable  $callback
      * @param  callable|null  $default
      * @return static
@@ -930,7 +933,7 @@ class Stringable implements JsonSerializable
     /**
      * Execute the given callback if the string ends with a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
      * @param  callable  $callback
      * @param  callable|null  $default
      * @return static
@@ -969,7 +972,7 @@ class Stringable implements JsonSerializable
     /**
      * Execute the given callback if the string matches a given pattern.
      *
-     * @param  string|array  $pattern
+     * @param  string|iterable<string>  $pattern
      * @param  callable  $callback
      * @param  callable|null  $default
      * @return static
@@ -1006,7 +1009,7 @@ class Stringable implements JsonSerializable
     /**
      * Execute the given callback if the string starts with a given substring.
      *
-     * @param  string|string[]  $needles
+     * @param  string|iterable<string>  $needles
      * @param  callable  $callback
      * @param  callable|null  $default
      * @return static
@@ -1060,7 +1063,7 @@ class Stringable implements JsonSerializable
      */
     public function wrap($before, $after = null)
     {
-        return new static($before.$this->value.($after ??= $before));
+        return new static(Str::wrap($this->value, $before, $after));
     }
 
     /**
@@ -1115,6 +1118,56 @@ class Stringable implements JsonSerializable
     public function toString()
     {
         return $this->value;
+    }
+
+    /**
+     * Get the underlying string value as an integer.
+     *
+     * @return int
+     */
+    public function toInteger()
+    {
+        return intval($this->value);
+    }
+
+    /**
+     * Get the underlying string value as a float.
+     *
+     * @return float
+     */
+    public function toFloat()
+    {
+        return floatval($this->value);
+    }
+
+    /**
+     * Get the underlying string value as a boolean.
+     *
+     * Returns true when value is "1", "true", "on", and "yes". Otherwise, returns false.
+     *
+     * @return bool
+     */
+    public function toBoolean()
+    {
+        return filter_var($this->value, FILTER_VALIDATE_BOOLEAN);
+    }
+
+    /**
+     * Get the underlying string value as a Carbon instance.
+     *
+     * @param  string|null  $format
+     * @param  string|null  $tz
+     * @return \Illuminate\Support\Carbon
+     *
+     * @throws \Carbon\Exceptions\InvalidFormatException
+     */
+    public function toDate($format = null, $tz = null)
+    {
+        if (is_null($format)) {
+            return Date::parse($this->value, $tz);
+        }
+
+        return Date::createFromFormat($format, $this->value, $tz);
     }
 
     /**

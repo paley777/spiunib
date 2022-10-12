@@ -55,6 +55,7 @@
         #fontp {
             font-size: 1rem !important;
         }
+
         .text-justify {
             text-align: justify;
         }
@@ -155,20 +156,27 @@
                             <div class="col-12 position-relative">
                                 <label for="inputState" class="form-label">Isi Laporan<span
                                         class="text-danger">*</span></label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Isi Laporan Anda Di Sini" name="isilaporan"
-                                    rows="3" required></textarea>
+                                <div class="form-group">
+                                    <textarea class="ckeditor form-control" name="isilaporan"></textarea>
+                                </div>
                                 <div class="invalid-tooltip">
                                     Isi Laporan Anda.
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <label for="inputZip" class="form-label">Lampiran (Jika lampiran lebih dari satu harap di
-                                    rar/zip. Maksimal ukuran 5 MB.)</label>
+                                <label for="inputZip" class="form-label">Lampiran gambar (Maksimal ukuran 5 MB. file
+                                    gambar .JPG , .PNG. Hanya 1 gambar)</label>
                                 <input class="form-control" type="file" name="lampiran">
-                                <p>
-                                    (Wajib terisi untuk kolom dengan tanda "<span class="text-danger">*</span>").
-                                </p>
                             </div>
+                            <div class="col-md-10">
+                                <label for="inputZip" class="form-label">Lampiran lanjutan (sertakan link google drive
+                                    yang
+                                    memuat seluruh bukti)</label>
+                                <input class="form-control" type="text" name="link">
+                            </div>
+                            <p>
+                                (Wajib terisi untuk kolom dengan tanda "<span class="text-danger">*</span>").
+                            </p>
                             <button class="btn btn-outline-primary" type="submit">
                                 Laporkan
                             </button>
@@ -179,7 +187,8 @@
             <div class="col-lg-3 col-xs-12">
                 <div class="alert" role="alert">
                     <h4 class="alert-heading fw-normal" id="fontheader">Menjadi Whistleblower.</h4>
-                    <p class="text-justify font-light" id="fontp">Bantu SPI dengan menjadi Whistleblower yang bijak. Anda dapat
+                    <p class="text-justify font-light" id="fontp">Bantu SPI dengan menjadi Whistleblower yang bijak.
+                        Anda dapat
                         melaporkan tindak
                         pelanggaran dengan cermat dan jelas dengan memenuhi unsur berikut.</p>
                     <ul class="list-group list-group-flush text-justify" id="fontp">
@@ -218,5 +227,11 @@
         $(document).ready(function() {
             $(".preloader").fadeOut();
         })
+    </script>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.ckeditor').ckeditor();
+        });
     </script>
 @endsection

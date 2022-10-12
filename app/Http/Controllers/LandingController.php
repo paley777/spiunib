@@ -60,6 +60,7 @@ class LandingController extends Controller
         ]);
         $validatedData['email'] = $request['email'];
         $validatedData['nohp'] = $request['nohp'];
+        $validatedData['link'] = $request['link'];
 
         if ($request->file('lampiran')) {
             $validatedData['lampiran'] = $request->file('lampiran')->store('reports');
