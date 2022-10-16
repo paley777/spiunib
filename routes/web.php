@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,6 @@ Route::post('/logout', [DashboardController::class, 'logout'])->middleware('auth
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/profile', [DashboardController::class, 'profile'])->middleware('auth');
 Route::resource('/dashboard/reports', ReportController::class)->middleware('auth');
+Route::resource('/dashboard/users', UserController::class)->middleware('auth');
 //print
 Route::post('/dashboard/reports/print', [ReportController::class, 'print'])->middleware('auth');
