@@ -19,6 +19,7 @@ class DashboardController extends Controller
         return view('dashboard.index', [
             'active' => 'index',
             'countreports' => Report::count(),
+            'countusers' => User::count(),
         ]);
     }
 
@@ -32,7 +33,6 @@ class DashboardController extends Controller
     {
         return view('dashboard.profile.index', [
             'active' => 'users',
-            'user' => User::where('id', Auth::user()->id),
         ]);
     }
     /**

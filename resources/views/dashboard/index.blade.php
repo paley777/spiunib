@@ -1,26 +1,27 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<style>
-    #fontheader {
-        font-size: 1.563rem !important;
-    }
-    #fontheader2 {
-        font-size: 4rem !important;
-    }
+    <style>
+        #fontheader {
+            font-size: 1.563rem !important;
+        }
 
-    #fontp {
-        font-size: 1.25rem !important;
-    }
+        #fontheader2 {
+            font-size: 4rem !important;
+        }
 
-    .fontlink {
-        font-size: 1rem !important;
-    }
+        #fontp {
+            font-size: 1.25rem !important;
+        }
 
-    .text-justify {
-        text-align: justify;
-    }
-</style>
+        .fontlink {
+            font-size: 1rem !important;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
     <div class="card text-center">
         <div class="card-header fontlink">
             Dashboard
@@ -45,12 +46,12 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="fontheader2">3</h5>
+                        <h5 class="card-title" id="fontheader2">{{ $countusers }}</h5>
                         <p class="card-text">Jumlah User terdata</p>
                         <p class="card-text"><small class="text-muted">Last refresh page</small></p>
                     </div>
                 </div>
-              
+
             </div>
         </div>
         <div class="card-footer text-muted">
