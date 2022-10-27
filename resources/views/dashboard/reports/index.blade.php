@@ -34,7 +34,13 @@
         </div>
         <div class="card-body">
             <h5 class="card-title" id="fontheader">Manajemen Pengaduan</h5>
-            <p class="card-text" id="fontp">Seluruh pengaduan terdapat di tabel ini</p>
+            <p class="card-text" id="fontp">Seluruh pengaduan terdapat di tabel ini
+            <form action="/dashboard/reports/printall" method="post" class="d-inline" target="_BLANK">
+                @csrf
+                <button class="badge bg-primary border-0" onclick="return confirm('Cetak Laporan?')">Cetak
+                    Laporan</button>
+            </form>
+            </p>
             <form action="/dashboard/reports">
                 <div class="input-group mb-3 fontlink">
                     <input type="text" class="form-control" placeholder="Cari Berdasarkan Tajuk Pengaduan" name="search"

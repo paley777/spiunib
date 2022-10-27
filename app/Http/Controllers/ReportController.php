@@ -102,4 +102,17 @@ class ReportController extends Controller
             'report' => Report::where('id', $request->id)->first(),
         ]);
     }
+
+    //All Report Print
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function printall()
+    {
+        return view('dashboard.prints.printreportall', [
+            'reports' => Report::orderBy('created_at', 'desc')->get(),
+        ]);
+    }
 }
