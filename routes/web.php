@@ -38,3 +38,4 @@ Route::resource('/dashboard/reports', ReportController::class)->middleware('auth
 Route::resource('/dashboard/users', UserController::class)->middleware('auth');
 //print
 Route::post('/dashboard/reports/print', [ReportController::class, 'print'])->middleware('auth');
+Route::post('/dashboard/reports/printall', [ReportController::class, 'printall'])->middleware('auth');
