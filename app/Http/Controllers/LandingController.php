@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Report;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use App\Models\News;
 
 class LandingController extends Controller
 {
@@ -23,16 +24,22 @@ class LandingController extends Controller
             'active' => 'report',
         ]);
     }
-    public function news()
+    public function news(Request $request)
     {
         return view('landing.news.index', [
             'active' => 'news',
+            'news' => News::orderBy('created_at', 'desc')
+                ->filter(request(['search']))
+                ->paginate(10)
+                ->withQueryString(),
         ]);
     }
-    public function newsdetails()
+
+    public function newsdetails(Request $request)
     {
         return view('landing.news.details', [
             'active' => 'news',
+            'news' => News::where('id', $request->id)->get(),
         ]);
     }
     public function profile()

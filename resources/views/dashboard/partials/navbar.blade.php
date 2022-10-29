@@ -91,7 +91,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link link-dark">
+                <a href="/dashboard/news" class="nav-link {{ $active === 'news' ? 'active' : 'link-dark' }}">
                     <i class="bi bi-newspaper"></i> Manajemen Berita
                 </a>
             </li>
