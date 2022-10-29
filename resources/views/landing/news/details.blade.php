@@ -36,6 +36,11 @@
         .text-justify {
             text-align: justify;
         }
+
+        p {
+            font-size: 1rem !important;
+            text-align: justify;
+        }
     </style>
     <div class="alert alert-warning mx-5 mt-4">
         <div class="row">
