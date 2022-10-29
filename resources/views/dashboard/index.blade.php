@@ -39,7 +39,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="fontheader2">124</h5>
+                        <h5 class="card-title" id="fontheader2">{{ $countnews }}</h5>
                         <p class="card-text">Jumlah Berita/Pengumuman terdata</p>
                         <p class="card-text"><small class="text-muted">Last refresh page</small></p>
                     </div>

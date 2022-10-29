@@ -37,8 +37,8 @@
             <p class="card-text" id="fontp">Seluruh pengaduan terdapat di tabel ini
             <form action="/dashboard/reports/printall" method="post" class="d-inline" target="_BLANK">
                 @csrf
-                <button class="badge bg-primary border-0" onclick="return confirm('Cetak Laporan?')">Cetak
-                    Laporan</button>
+                <button class="btn btn-sm bg-primary text-white" onclick="return confirm('Cetak Laporan?')">Cetak
+                    Semua Laporan</button>
             </form>
             </p>
             <form action="/dashboard/reports">

@@ -5,6 +5,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,10 @@ Route::get('/news', [LandingController::class, 'news']);
 Route::get('/profile', [LandingController::class, 'profile']);
 //upload report whistleblower
 Route::post('/report/create', [LandingController::class, 'storereport']);
+
 //Details News
-Route::get('/news/details/1', [LandingController::class, 'newsdetails']);
+Route::post('/spi/details', [LandingController::class, 'newsdetails']);
+
 //login
 Route::get('/login', [LandingController::class, 'login']);
 Route::post('/login', [LandingController::class, 'authenticate'])->name('login');
@@ -36,6 +39,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::get('/dashboard/profile', [DashboardController::class, 'profile'])->middleware('auth');
 Route::resource('/dashboard/reports', ReportController::class)->middleware('auth');
 Route::resource('/dashboard/users', UserController::class)->middleware('auth');
+Route::resource('/dashboard/news', NewsController::class)->middleware('auth');
 //print
 Route::post('/dashboard/reports/print', [ReportController::class, 'print'])->middleware('auth');
 Route::post('/dashboard/reports/printall', [ReportController::class, 'printall'])->middleware('auth');
