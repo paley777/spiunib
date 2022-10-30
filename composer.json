@@ -8,10 +8,10 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
+        "php": "8.0",
         "ckeditor/ckeditor": "4.*",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.19",
+        "laravel/framework": "^9.0.0",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "laravelcollective/html": "^6.3"
