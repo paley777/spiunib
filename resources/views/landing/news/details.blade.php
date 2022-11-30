@@ -1,48 +1,7 @@
 @extends('landing.layouts.main2')
 
 @section('container')
-    <style>
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background-color: #fff;
-        }
-
-        .preloader .loading {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font: 14px arial;
-        }
-    </style>
-    <style>
-        #fontheader {
-            font-size: 1.563rem !important;
-        }
-
-        #fontp {
-            font-size: 1.25rem !important;
-        }
-
-        #fontlink {
-            font-size: 1rem !important;
-        }
-
-        .text-justify {
-            text-align: justify;
-        }
-
-        p {
-            font-size: 1rem !important;
-            text-align: justify;
-        }
-    </style>
-    <div class="alert alert-warning mx-5 mt-4">
+    <div class="alert alert-warning mx-5 mt-4" style="background-color: #f3f3f3">
         <div class="row">
             <div class="col-9">
                 <h4 class="alert-heading fw-normal" id="fontheader">{{ $news[0]->title }}</h4>
@@ -59,9 +18,4 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $(".preloader").fadeOut();
-        })
-    </script>
 @endsection

@@ -1,31 +1,20 @@
-<style>
-    .navbar {
-        background-image: linear-gradient(to top, #12145c 0%, #1d52a6 100%);
-    }
-
-    .nav-link {
-        font-size: 1rem !important;
-    }
-
-</style>
-
-<nav class="navbar shadow sticky-top navbar-expand-lg navbar-dark px-1 p-2">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="{{ asset('storage/images/logo_spi1.png') }}" alt="" width="230" height="40"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class=" navbar-nav ">
-                <a class="nav-link {{ $active === 'index' ? 'active' : '' }}" href="/">Beranda</a>
-                <a class="nav-link {{ $active === 'news' ? 'active' : '' }}" href="/news">Berita dan Pengumuman</a>
-                <a class="nav-link {{ $active === 'report' ? 'active' : '' }}" href="/report">Pengaduan</a>
-                <a class="nav-link {{ $active === 'profile' ? 'active' : '' }}" href="/profile">Profil</a>
-            </div>
+<nav class="navbar sticky-top navbar-light navbar-expand-md py-3" style="background: #d8dbcc">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="{{ asset('storage/images/logo_spi2.png') }}" alt="" width="230" height="40"></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span
+                class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-2" class="collapse navbar-collapse" style="color: rgb(255,255,255);">
+            <ul class="navbar-nav ms-auto" style="color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">
+                <li class="nav-item"><a class="nav-link {{ $active === 'index' ? 'active' : '' }}"
+                        href="/">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'news' ? 'active' : '' }}"
+                        href="/news">Berita</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'report' ? 'active' : '' }}"
+                        href="/report">Pengaduan</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'report' ? 'active' : '' }}"
+                        href="/profile">Profil</a></li>
+            </ul>
         </div>
-
-
     </div>
 </nav>

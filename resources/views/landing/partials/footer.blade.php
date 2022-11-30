@@ -10,22 +10,13 @@
         text-decoration: none !important;
     }
 
-    .content {
-        height: 70vh;
-    }
-
     .footer-20192 {
-        position: relative;
-        color: #fff;
-        padding: 7rem 0;
-        background-image: linear-gradient(to top, #12145c 0%, #1d52a6 100%);
+        background-color: #002d47;
     }
 
     .footer-20192 .container {
         position: relative;
     }
-
-    .footer-20192 h3 {}
 
     .footer-20192 .links li {
         margin-bottom: 10px;
@@ -69,9 +60,6 @@
 
     .footer-20192 .footer-logo {
         color: #fff;
-
-        text-transform: uppercase;
-        letter-spacing: .1rem;
     }
 
     .footer-20192 .copyright {
@@ -82,20 +70,14 @@
         -webkit-box-shadow: -20px -20px 0 0 rgba(54, 36, 134, 0.891);
         box-shadow: -20px -20px 0 0 rgba(56, 62, 69, 0.2);
         padding: 20px;
-        background-image: linear-gradient(to top, #fbff00 0%, #ffc400 100%);
-        top: -150px;
-        position: relative;
+        background-image: linear-gradient(to top, #fbff00 0%, #fbff00 100%);
+        top: -80px;
+
     }
 
     .footer-20192 .cta h2,
     .footer-20192 .cta h3 {
         line-height: 1.5;
-    }
-
-    .footer-20192 .cta h3 {}
-
-    .pattern {
-        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.5' stroke='hsla(216, 0%, 97%, 0.13)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
     }
 </style>
 <style>
@@ -120,45 +102,33 @@
         }
     }
 </style>
-<style>
-    .fontheader {
-        font-size: 1.563rem !important;
-    }
+<footer class="footer-20192" style="color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">
+    <div class="container py-4 py-lg-4">
 
-    .fontp {
-        font-size: 1.25rem !important;
-    }
-
-    .fontlink {
-        font-size: 1rem !important;
-    }
-</style>
-<footer class="footer-20192">
-    <div class="pattern">
         <div class="site-section">
             <div class="container">
-                <div class="cta d-block d-flex align-items-center px-5" id="slide">
+                <div class="cta d-block d-flex align-items-center" id="slide">
                     <div>
-                        <h2 class="mb-0 text-dark fontheader fw-normal">Laman Pengaduan</h2>
-                        <h3 class="text-dark fontp fw-normal">Laporkan segala tindak berindikasi pelanggaran selingkung
+                        <h4 class="mb-0 text-dark fw-normal">Laman Pengaduan</h4>
+                        <h5 class="text-dark fw-light">Laporkan segala tindak berindikasi pelanggaran selingkung
                             Universitas
-                            Bengkulu ke laman berikut.</h3>
+                            Bengkulu ke laman berikut.</h5>
                     </div>
                     <div class="ms-auto">
                         <a href="/report" class="btn btn-dark rounded-0 py-3 px-5">Lapor</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="#" class="footer-logo fontp">Satuan Pengawasan Internal</a>
-                        <p class="footer-logo fontp">Universitas Bengkulu</p>
-                        <p class="copyright fontp">
+                <div class="row" style="color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">
+                    <div class="col-lg-4 col-sm-12" style="font-family: ABeeZee, sans-serif !important;">
+                        <a href="/" class="footer-logo fs-3">Satuan Pengawasan Internal</a>
+                        <p class="footer-logo">Universitas Bengkulu</p>
+                        <p class="copyright">
                             <small>&copy; 2022</small>
                         </p>
                     </div>
-                    <div class="col-3">
-                        <h3 class="fontlink">Tautan Internal</h3>
-                        <ul class="list-unstyled links fontlink">
+                    <div class="col-lg-3 col-sm-12">
+                        <h5>Tautan Internal</h5>
+                        <ul class="list-unstyled links fs-6">
                             <li><a href="https://www.unib.ac.id/">Universitas Bengkulu</a></li>
                             <li><a href="https://pak.unib.ac.id/">Sistem Akademik</a></li>
                             <li><a href="https://presensi.unib.ac.id/">Sistem Absensi Perkuliahan</a></li>
@@ -168,27 +138,27 @@
                             <li><a href="http://repository.unib.ac.id/">Sistem Repository</a></li>
                         </ul>
                     </div>
-                    <div class="col-3">
-                        <h3 class="fontlink">Tautan Eksternal</h3>
-                        <ul class="list-unstyled links fontlink">
-                            <li><a href="https://www.kemdikbud.go.id/main/">Kementerian Pendidikan, Kebudayaan, Riset
+                    <div class="col-lg-3 col-sm-12">
+                        <h5>Tautan Eksternal</h5>
+                        <ul class="list-unstyled links fs-6">
+                            <li><a href="https://www.kemdikbud.go.id/main/">Kementerian Pendidikan, Kebudayaan,
+                                    Riset
                                     dan Teknologi</a></li>
                             <li><a href="http://blu.djpbn.kemenkeu.go.id/">Direktorat Pembinaan Pengelolaan Keuangan
                                     BLU</a></li>
                             <li><a href="https://bengkuluprov.go.id/">Pemerintah Provinsi Bengkulu</a></li>
                         </ul>
                     </div>
-                    <div class="col-2">
-                    <h3 class="fontlink">Kontak Kami</h3>
-                        <ul class="list-unstyled links fontlink">
+                    <div class="col-lg-2 col-sm-12">
+                        <h5>Kontak Kami</h5>
+                        <ul class="list-unstyled links fs-6">
                             <li><a href="mailto: spi@unib.ac.id"><i class="bi bi-envelope-fill"></i> E-mail</a></li>
-                            <li><a href="https://wa.me/0811738966"><i class="bi bi-whatsapp"></i></i> Whatsapp</a></li>
+                            <li><a href="https://wa.me/0811738966"><i class="bi bi-whatsapp"></i></i> Whatsapp</a>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </footer>

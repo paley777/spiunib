@@ -46,27 +46,19 @@
             line-height: 1em;
         }
     </style>
-    <style>
-        .fontheader {
-            font-size: 3.052rem !important;
-        }
-
-        .fontp {
-            font-size: 3rem !important;
-        }
-    </style>
-    <div class="py-4 mt-0 px-0 background">
+    <div class="py-4 mt-0 px-0 background"
+        style="color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">
         <header class="py-5">
-            <div class="pricing-header mt-5 py-5 p-3 pb-md-4 mx-auto text-center">
-                <h1 class="ml11 display-4 text-white fw-normal"> <span class="text-wrapper">
-                        <span class="line line1"></span>
-                        <span class="letters" style="font-size: 3.052rem !important;">Selamat Datang</span>
-                    </span></h1>
-                <p class="text-white fontp">Situs Resmi Satuan Pengawasan Internal Universitas Bengkulu.
-                </p>
+        <div class="pricing-header mt-5 py-5 p-3 pb-md-4 mx-auto text-center">
+            <h1 class="ml11 display-4 text-white fw-normal"> <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">Selamat Datang</span>
+                </span></h1>
+            <p class="text-white">Situs Resmi Satuan Pengawasan Internal Universitas Bengkulu.
+            </p>
 
-                <a type="button" href="/news" class="btn btn-dark" id="fontp">Lihat Berita Terkini</a>
-            </div>
+            <a type="button" href="/news" class="btn btn-dark" id="fontp">Lihat Berita Terkini</a>
+        </div>
         </header>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -87,7 +79,7 @@
             })
             .add({
                 targets: '.ml11 .line',
-                translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+                translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 50],
                 easing: "easeOutExpo",
                 duration: 700,
                 delay: 100
