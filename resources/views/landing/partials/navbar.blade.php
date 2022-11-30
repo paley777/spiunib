@@ -12,7 +12,7 @@
                         href="/news">Berita</a></li>
                 <li class="nav-item"><a class="nav-link {{ $active === 'report' ? 'active' : '' }}"
                         href="/report">Pengaduan</a></li>
-                <li class="nav-item"><a class="nav-link {{ $active === 'report' ? 'active' : '' }}"
+                <li class="nav-item"><a class="nav-link {{ $active === 'profile' ? 'active' : '' }}"
                         href="/profile">Profil</a></li>
             </ul>
         </div>
