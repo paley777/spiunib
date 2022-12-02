@@ -1,78 +1,4 @@
-<style>
-    #fontheader {
-        font-size: 1.563rem !important;
-    }
-
-    #fontp {
-        font-size: 1.25rem !important;
-    }
-
-    .fontlink {
-        font-size: 15px !important;
-    }
-
-    .text-justify {
-        text-align: justify;
-    }
-</style>
-<style>
-    .bd-placeholder-img {
-        font-size: 1rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 1rem;
-        }
-    }
-
-    .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-    }
-
-    .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-    }
-
-    .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-</style>
-<style>
-    .sidebar {
-        position: fixed;
-    }
-</style>
-<main class="d-flex flex-nowrap">
+{{-- <main class="d-flex flex-nowrap">
     <div class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; min-height: 100%;">
         <a href="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
             <img src="{{ asset('storage/images/logo_spi2.png') }}" alt="" width="230" height="40">
@@ -121,4 +47,26 @@
             </ul>
         </div>
     </div>
-</main>
+</main> --}}
+
+<nav class="navbar sticky-top navbar-light navbar-expand-md py-3"
+    style="background: #d8dbcc; font-family: ABeeZee, sans-serif;">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="{{ asset('storage/images/logo_spi2.png') }}" alt="" width="230" height="40"></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span
+                class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-2" class="collapse navbar-collapse" style="color: rgb(255,255,255);">
+            <ul class="navbar-nav ms-auto" style="color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">
+                <li class="nav-item"><a class="nav-link {{ $active === 'index' ? 'active' : '' }}"
+                        href="/dashboard">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'reports' ? 'active' : '' }}"
+                        href="/dashboard/reports">Manajamen Pengaduan</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'news' ? 'active' : '' }}"
+                        href="/dashboard/news">Manajemen Berita</a></li>
+                <li class="nav-item"><a class="nav-link {{ $active === 'users' ? 'active' : '' }}"
+                        href="/dashboard/users">Manajemen Akun</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

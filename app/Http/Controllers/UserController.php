@@ -46,10 +46,10 @@ class UserController extends Controller
     {
         $validatedData = $request->validate([
             'nama' => 'required',
-            'nip' => 'required',
+            'nip' => 'required|unique:users',
             'jabatan' => 'required',
-            'email' => 'required',
-            'no_tlp' => 'required',
+            'email' => 'required|unique:users',
+            'no_tlp' => 'required|unique:users',
             'password' => 'required',
         ]);
         $validatedData['password'] = Hash::make($validatedData['password']);
