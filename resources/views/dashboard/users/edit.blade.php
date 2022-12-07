@@ -1,40 +1,21 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-    <style>
-        #fontheader {
-            font-size: 1.563rem !important;
-        }
-
-        #fontheader2 {
-            font-size: 4rem !important;
-        }
-
-        #fontp {
-            font-size: 1.25rem !important;
-        }
-
-        .fontlink {
-            font-size: 1rem !important;
-        }
-
-        .text-justify {
-            text-align: justify;
-        }
-    </style>
-    <div class="card">
-        @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{ session('success') }}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="container py-4 py-xl-5" style="font-family: ABeeZee, sans-serif;">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
         @endif
-        <div class="card-header fontlink  text-center">
-            Dashboard
-        </div>
-        <div class="card-body ">
-            <h5 class="card-title  text-center" id="fontheader">Edit User</h5>
-            <p class="card-text" id="fontp"></p>
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Ubah Akun</h2>
+                <p class="w-lg-50">Manajemen Akun</p>
+            </div>
             <form class="row g-2 needs-validation" method="post" action="/dashboard/users/{{ $user->id }}" novalidate>
                 @method('put')
                 @csrf
@@ -104,9 +85,6 @@
                     Ubah Data
                 </button>
             </form>
-        </div>
-        <div class="card-footer text-muted">
-            @spiunib
         </div>
     </div>
 

@@ -92,21 +92,135 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $rules = [
-            'id' => 'required',
-            'nama' => 'required',
-            'nip' => 'required',
-            'jabatan' => 'required',
-            'email' => 'required',
-            'no_tlp' => 'required',
-            'password' => 'required',
-        ];
-        $validatedData = $request->validate($rules);
+        if ($request->email == $user->email) {
+            if ($request->nip == $user->nip) {
+                if ($request->no_tlp == $user->no_tlp) {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required',
+                        'jabatan' => 'required',
+                        'email' => 'required',
+                        'no_tlp' => 'required',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
 
-        $validatedData['password'] = Hash::make($validatedData['password']);
-        User::where('id', $validatedData['id'])->update($validatedData);
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
 
-        return redirect('/dashboard/users')->with('success', 'Akun telah diubah!.');
+                    return redirect('/dashboard/users')->with('success', 'Akun telah diubah!.');
+                } else {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required',
+                        'jabatan' => 'required',
+                        'email' => 'required',
+                        'no_tlp' => 'required|unique:users',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+
+                    return redirect('/dashboard/users')->with('success', 'Akun telah diubah!.');
+                }
+            } else {
+                if ($request->no_tlp == $user->no_tlp) {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required|unique:users',
+                        'jabatan' => 'required',
+                        'email' => 'required',
+                        'no_tlp' => 'required',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                } else {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required|unique:users',
+                        'jabatan' => 'required',
+                        'email' => 'required',
+                        'no_tlp' => 'required|unique:users',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                }
+            }
+        } else {
+            if ($request->nip == $user->nip) {
+                if ($request->no_tlp == $user->no_tlp) {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required',
+                        'jabatan' => 'required',
+                        'email' => 'required|unique:users',
+                        'no_tlp' => 'required',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                } else {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required',
+                        'jabatan' => 'required',
+                        'email' => 'required|unique:users',
+                        'no_tlp' => 'required|unique:users',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                }
+            } else {
+                if ($request->no_tlp == $user->no_tlp) {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required|unique:users',
+                        'jabatan' => 'required',
+                        'email' => 'required|unique:users',
+                        'no_tlp' => 'required',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                } else {
+                    $rules = [
+                        'id' => 'required',
+                        'nama' => 'required',
+                        'nip' => 'required|unique:users',
+                        'jabatan' => 'required',
+                        'email' => 'required|unique:users',
+                        'no_tlp' => 'required|unique:users',
+                        'password' => 'required',
+                    ];
+                    $validatedData = $request->validate($rules);
+
+                    $validatedData['password'] = Hash::make($validatedData['password']);
+                    User::where('id', $validatedData['id'])->update($validatedData);
+                }
+            }
+        }
     }
 
     /**

@@ -125,6 +125,10 @@
                         <p class="copyright">
                             <small>&copy; 2022</small>
                         </p>
+                        <p class="copyright">
+                            <small>&copy; 2022 | provided by SPI UNIB | <a
+                                    href="https://www.instagram.com/valley_feeds/">ValleyFeeds</a></small>
+                        </p>
                     </div>
                     <div class="col-lg-3 col-sm-12">
                         <h5>Tautan Internal</h5>
