@@ -136,6 +136,8 @@
                                     dan Teknologi</a></li>
                             <li><a href="http://blu.djpbn.kemenkeu.go.id/">Direktorat Pembinaan Pengelolaan Keuangan
                                     BLU</a></li>
+                            <li><a href="https://www.bpkp.go.id/">Badan Pengawasan Keuangan dan Pembangunan</a>
+                            </li>
                             <li><a href="https://bengkuluprov.go.id/">Pemerintah Provinsi Bengkulu</a></li>
                         </ul>
                     </div>
