@@ -123,9 +123,6 @@
                         <a href="/" class="footer-logo fs-3">Satuan Pengawasan Internal</a>
                         <p class="footer-logo">Universitas Bengkulu</p>
                         <p class="copyright">
-                            <small>&copy; 2022</small>
-                        </p>
-                        <p class="copyright">
                             <small>&copy; 2022 | provided by SPI UNIB | <a
                                     href="https://www.instagram.com/valley_feeds/">ValleyFeeds</a></small>
                         </p>
