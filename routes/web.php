@@ -43,3 +43,9 @@ Route::resource('/dashboard/news', NewsController::class)->middleware('auth');
 //print
 Route::post('/dashboard/reports/print', [ReportController::class, 'print'])->middleware('auth');
 Route::post('/dashboard/reports/printall', [ReportController::class, 'printall'])->middleware('auth');
+
+Route::get('/generate', function () {
+    Illuminate\Support\Facades\Artisan::call('storage:link');
+    echo 'ok';
+});
+
