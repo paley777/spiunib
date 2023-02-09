@@ -1,21 +1,30 @@
 @extends('landing.layouts.main2')
 
 @section('container')
-    <div class="alert alert-warning mx-5 mt-4" style="background-color: #f3f3f3">
-        <div class="row">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto !important;
+        }
+    </style>
+    <div class="alert alert-warning mt-4" style="background-color: #f3f3f3">
+        <div class="row mx-1">
             <div class="col-9">
-                <h4 class="alert-heading fw-normal" id="fontheader">{{ $news[0]->title }}</h4>
-                <h5 class="fw-light" id="fonlink">Diunggah oleh {{ $news[0]->creator }} pada
-                    {{ $news[0]->created_at->format('l, d/F/Y') }}</h5>
-            </div>
-            <div class="col-3 d-flex">
-                <a href="/news" id="fontlink">Kembali ke Laman Berita Utama ></a>
+                <h5 class="alert-heading fw-normal" id="fontheader">{{ $news[0]->title }}</h5>
+                <h6 class="fw-light" id="fonlink">Diunggah oleh {{ $news[0]->creator }} pada
+                    {{ $news[0]->created_at->format('l, d/F/Y') }}</h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <p class="fw-normal text-justify" id="fontlink">{!! $news[0]->body !!}
+        <div class="row mx-1" style="text-align: justify;
+        text-justify: inter-word;">
+            <div class="col">
+                <p class="fw-normal">
+                    {!! $news[0]->body !!}
             </div>
+        </div>
+
+        <div class="col">
+            <a href="/news" id="fontlink">Kembali ke Laman Berita Utama ></a>
         </div>
     </div>
 @endsection
