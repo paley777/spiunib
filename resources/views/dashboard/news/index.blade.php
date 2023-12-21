@@ -40,7 +40,7 @@
                 <tr>
                     @foreach ($newses as $key => $news)
                         <td>{{ $newses->firstItem() + $key }}</td>
-                        <td>{{ Carbon\Carbon::parse($news->created_at)->isoFormat('dddd, D MMMM Y') }}</td>
+                        <td>{{ Carbon\Carbon::parse($news->created_at)->isoFormat('dddd, D MMMM Y H:m:s') }}</td>
                         <td>{{ $news->creator }}</td>
                         <td>{{ $news->title }}</td>
                         <td>

@@ -24,7 +24,7 @@
                             <h5 class="alert-heading fw-normal" id="fontheader">{{ $news->title }}
                             </h5>
                             <h6 class="fw-light" id="fonlink">Diunggah oleh {{ $news->creator }} pada
-                                {{ Carbon\Carbon::parse($news->created_at)->isoFormat('dddd, D MMMM Y') }}
+                                {{ Carbon\Carbon::parse($news->created_at)->isoFormat('dddd, D MMMM Y H:m:s') }}
                             </h6>
                         </div>
                     </div>
