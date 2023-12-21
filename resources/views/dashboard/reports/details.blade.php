@@ -25,7 +25,7 @@
             </h5>
             <h5 class="card-title fw-bold" id="fontheader">{{ $report->judul }}</h5>
             <h6 class="card-text fontlink fw-normal">Pengaduan oleh {{ $report->pelapor }} pada
-                {{ $report->created_at->format('d/m/Y H:i:s') }}</h6>
+                {{ Carbon\Carbon::parse($report->created_at)->isoFormat('dddd, D MMMM Y') }}</h6>
             <h6 class="card-text fontlink fw-normal">Pelapor merupakan seorang {{ $report->kategori }}</h6>
             <h6 class="card-text fontlink fw-normal">Melaporkan oknum dari unit kerja {{ $report->unitkerja }} dengan isi
                 laporan sebagai berikut :</h6>

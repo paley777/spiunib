@@ -44,7 +44,8 @@
                 @foreach ($reports as $key => $report)
                     <tr>
                         <td>{{ $reports->firstItem() + $key }}</td>
-                        <td>{{ $report->created_at }}</td>
+                        <td>{{ Carbon\Carbon::parse($report->created_at)->isoFormat('dddd, D MMMM Y') }}
+                        </td>
                         <td>{{ $report->kategori }}</td>
                         <td>{{ $report->judul }}</td>
                         <td>

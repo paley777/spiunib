@@ -12,7 +12,7 @@
             <div class="col-9">
                 <h5 class="alert-heading fw-normal" id="fontheader">{{ $news[0]->title }}</h5>
                 <h6 class="fw-light" id="fonlink">Diunggah oleh {{ $news[0]->creator }} pada
-                    {{ $news[0]->created_at->format('l, d/F/Y') }}</h6>
+                    {{ Carbon\Carbon::parse($news[0]->created_at)->isoFormat('dddd, D MMMM Y') }}</h6>
             </div>
         </div>
         <div class="row mx-1" style="text-align: justify;

@@ -40,7 +40,7 @@
                                                 <h1 class="text-uppercase fw-bold">{{ $news[0]->title }}
                                                 </h1>
                                                 <p class="my-3">{!! Str::limit(strip_tags($news[0]->body), 200) !!}...</p>
-                                                <p><small>Created
+                                                <p><small>Disusun
                                                         {{ $news[0]->created_at->diffForHumans() }}</small></p>
                                                 <button class="btn btn-warning" type="submit">Menuju Berita</button>
                                             </div>
@@ -66,7 +66,7 @@
                                             <p class="text-warning card-text mb-0">Berita SPI</p>
                                             <h4 class="card-title">{{ $news1->title }}</h4>
                                             <p class="card-text">{!! Str::limit(strip_tags($news1->body), 200) !!}...</p>
-                                            <p><small>Created
+                                            <p><small>Disusun
                                                     {{ $news1->created_at->diffForHumans() }}</small></p>
                                             <button class="btn btn-sm btn-warning" type="submit">Menuju Berita</button>
                                         </div>
