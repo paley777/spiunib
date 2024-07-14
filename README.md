@@ -2,9 +2,9 @@
 ![Logo](https://i.postimg.cc/T1gCLyLL/logo-SPI-UNIB.png)
 
 
-# Sistem Informasi Satuan Pengawasan Internal Universitas Bengkulu
+# Bengkulu University Internal Monitoring Unit Information System
 
-Sistem informasi berbasis website yang berfungsi sebagai pusat informasi dan pengaduan SPI UNIB.
+Website-based information system that functions as SPI UNIB's information and complaints center.
 
 
 ## Authors
